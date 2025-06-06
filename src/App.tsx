@@ -24,7 +24,8 @@ import {
   User,
   Briefcase,
   FolderGit2,
-  MessageSquare
+  MessageSquare,
+  File
 } from 'lucide-react';
 
 function App() {
@@ -129,11 +130,14 @@ function App() {
                 { icon: Home, label: "Home", href: "#home" },
                 { icon: User, label: "About", href: "#about" },
                 { icon: Briefcase, label: "Projects", href: "#projects" },
-                { icon: MessageSquare, label: "Contact", href: "#contact" }
+                { icon: MessageSquare, label: "Contact", href: "#contact" },
+                { icon: File, label: "Resume", href: "https://docs.google.com/document/d/1WKI8u3Zu0vwGfOsNi3OSTf7Ym8y92Qqk-9jV_AIdWMM/edit?tab=t.0", target: "_blank", rel: "noopener noreferrer" }
               ].map((item) => (
                 <motion.a
                   key={item.label}
                   href={item.href}
+                  target={item.target}
+                  rel={item.rel}
                   className="text-gray-400 hover:text-blue-400 transition-colors duration-200 relative group"
                   whileHover={{ y: -2 }}
                 >
@@ -169,11 +173,14 @@ function App() {
               { icon: Home, label: "Home", href: "#home" },
               { icon: User, label: "About", href: "#about" },
               { icon: Briefcase, label: "Projects", href: "#projects" },
-              { icon: MessageSquare, label: "Contact", href: "#contact" }
+              { icon: MessageSquare, label: "Contact", href: "#contact" },
+              { icon: File, label: "Resume", href: "https://docs.google.com/document/d/1WKI8u3Zu0vwGfOsNi3OSTf7Ym8y92Qqk-9jV_AIdWMM/edit?tab=t.0", target: "_blank", rel: "noopener noreferrer" }
             ].map((item) => (
               <a
                 key={item.label}
                 href={item.href}
+                target={item.target}
+                rel={item.rel}
                 className="flex items-center px-3 py-2 text-gray-400 hover:text-blue-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
